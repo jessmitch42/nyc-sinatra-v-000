@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= @fig.name %></title>
+  </head>
+  <body>
+    <h2>Figure: <%= @fig.name %></h2>
+    <h3>Landmarks: </h3>
+    <% @fig.landmarks.each.with_index(1) do |l,i|  %>
+      <p><%= i %>. Name: <%= l.name %></p>
+      <p>   Year Completed: <%= l.year_completed %></p>
+    <% end %>
+    <h3>Titles: </h3>
+    <% @fig.titles.each.with_index(1) do |l,i|  %>
+      <p><%= i %>. Name: <%= l.name %></p>
+    <% end %>
+  </body>
+</html>

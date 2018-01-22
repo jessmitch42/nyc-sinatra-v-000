@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Landmarks</title>
+  </head>
+  <body>
+    All Landmarks
+    <% @landmarks.each.with_index(1) do |l, i| %>
+      <p><%= i %>. <a href="/landmarks/<%= l.id %>"><%= l.name %></a>; Completed: <%= l.year_completed %></p>
+    <% end %>
+
+  </body>
+</html>
